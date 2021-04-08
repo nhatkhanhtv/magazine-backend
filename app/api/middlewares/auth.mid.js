@@ -100,9 +100,9 @@ export const CheckAuth = (req, res, next) => {
           if (typeof _actionType !== 'string' || _actionType.length === 0) {
             return res.json(badRequest('AUTH.ERROR.ACTION_TYPE_INVALID'));
           }
-          if (_actionType !== getActionType()) {
-            return res.json(badRequest('AUTH.ERROR.ACTION_TYPE_MISMATCH'));
-          }
+          //if (_actionType !== getActionType()) {
+          //  return res.json(badRequest('AUTH.ERROR.ACTION_TYPE_MISMATCH'));
+          //}
           if (!_signature) {
             return res.json(unauthorized('AUTH.ERROR.SIGNATURE_BODY_MISSING'));
           }
